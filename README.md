@@ -1,4 +1,6 @@
-# R Project - Dr. Semmelweis and the discovery of handwashing
+## R Project
+## Dr. Semmelweis and the discovery of handwashing
+
 This repository contains my works following the project tutorial on DataCamp.
 
 Techniques used:
