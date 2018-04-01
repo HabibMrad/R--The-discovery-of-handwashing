@@ -17,6 +17,7 @@ This markdown aims to provide a reference of work to the future users of DataCam
 <br/> [7. More handwashing, fewer deaths?](#more-handwashing-fewer-deaths)
 <br/> [8. A statistical analysis of Semmelweis handwashing data](#a-statistical-analysis-of-semmelweis-handwashing-data)
 <br/> [9. The fate of Dr. Semmelweis](#the-fate-of-dr-semmelweis)
+#### Note: The anchor tags will only work when the Rmd file is downloaded.
 
 ## 1. Meet Dr Ignaz Semmelweis
 
