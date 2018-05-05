@@ -1,13 +1,12 @@
-# R Project
 # Dr. Semmelweis and the discovery of handwashing
 
 This repository aims to provide a reference of work on the project *Dr. Semmelweis and the discovery of handwashing* to other users of [DataCamp](https://www.datacamp.com/home). Plots and images can be found under directory **Semmelweis_files**.
 
-### Project Flow:
+## Project Flow:
 
 <br/> [1. Meet Dr. Ignaz Semmelweis](#meet-dr-ignaz-semmelweis) <br/> [2. The alarming number of deaths](#the-alarming-number-of-deaths) <br/> [3. Death at the clinics](#death-at-the-clinics) <br/> [4. The handwashing begins](#the-handwashing-begins) <br/> [5. The effect of handwashing](#the-effect-of-handwashing) <br/> [6. The effect of handwashing highlighted](#the-effect-of-handwashing-highlighted) <br/> [7. More handwashing, fewer deaths?](#more-handwashing-fewer-deaths) <br/> [8. A statistical analysis of Semmelweis handwashing data](#a-statistical-analysis-of-semmelweis-handwashing-data) <br/> [9. The fate of Dr. Semmelweis](#the-fate-of-dr-semmelweis)
 
-## 1. Meet Dr Ignaz Semmelweis
+### 1. Meet Dr Ignaz Semmelweis
 ---------------------------
 
 ![Dr. Ignaz Semmelweis](/Semmelweis_files/ignaz_semmelweis_1860.jpeg)
@@ -43,7 +42,7 @@ yearly
     ## 11  1845   3241     66 clinic 2
     ## 12  1846   3754    105 clinic 2
 
-## 2. The alarming number of deaths
+### 2. The alarming number of deaths
 --------------------------------
 
 The table above shows the number of women giving birth at the two clinics at the Vienna General Hospital for the years 1841 to 1846. You'll notice that giving birth was very dangerous; an alarming number of women died as the result of childbirth, most of them from childbed fever.
@@ -75,7 +74,7 @@ yearly
     ## 11  1845   3241     66 clinic 2            0.0204
     ## 12  1846   3754    105 clinic 2            0.0280
 
-## 3. Death at the clinics
+### 3. Death at the clinics
 -----------------------
 
 If we now plot the proportion of deaths at both clinic 1 and clinic 2 we'll see a curious pattern...
@@ -90,7 +89,7 @@ ggplot(yearly, aes(year, proportion_deaths, col = clinic)) + geom_line()
 
 ![](Semmelweis_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
-## 4. The handwashing begins
+### 4. The handwashing begins
 -------------------------
 
 Why is the proportion of deaths constantly so much higher in Clinic 1? Semmelweis saw the same pattern and was puzzled and distressed. The only difference between the clinics was that many medical students served at Clinic 1, while mostly midwife students served at Clinic 2. While the midwives only tended to the women giving birth, the medical students also spent time in the autopsy rooms examining corpses.
@@ -121,7 +120,7 @@ head(monthly)
     ## 5 1841-05-01    255      2           0.00784
     ## 6 1841-06-01    200     10           0.0500
 
-## 5. The effect of handwashing
+### 5. The effect of handwashing
 ----------------------------
 
 With the data loaded we can now look at the proportion of deaths over time. In the plot below we haven't marked where obligatory handwashing started, but it reduced the proportion of deaths to such a degree that you should be able to spot it!
@@ -133,7 +132,7 @@ ggplot(monthly, aes(date, proportion_deaths)) + geom_line()
 
 ![](Semmelweis_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
-## 6. The effect of handwashing highlighted
+### 6. The effect of handwashing highlighted
 ----------------------------------------
 
 Starting from the summer of 1847 the proportion of deaths is drastically reduced and, yes, this was when Semmelweis made handwashing obligatory.
@@ -154,7 +153,7 @@ ggplot(monthly, aes(date, proportion_deaths, col = handwashing_started)) + geom_
 
 ![](Semmelweis_files/figure-markdown_github/unnamed-chunk-6-1.png)
 
-## 7. More handwashing, fewer deaths?
+### 7. More handwashing, fewer deaths?
 ----------------------------------
 
 Again, the graph shows that handwashing had a huge effect. How much did it reduce the monthly proportion of deaths on average?
@@ -177,7 +176,7 @@ monthly_summary
     ## 1 F                                   0.105 
     ## 2 T                                   0.0211
 
-## 8. A statistical analysis of Semmelweis handwashing data
+### 8. A statistical analysis of Semmelweis handwashing data
 --------------------------------------------------------
 
 It reduced the proportion of deaths by around 8 percentage points! From 10% on average before handwashing to just 2% when handwashing was enforced (which is still a high number by modern standards). To get a feeling for the uncertainty around how much handwashing reduces mortalities we could look at a confidence interval (here calculated using a t-test).
@@ -200,7 +199,7 @@ test_result
     ## mean in group FALSE  mean in group TRUE 
     ##          0.10504998          0.02109338
 
-## 9. The fate of Dr Semmelweis
+### 9. The fate of Dr Semmelweis
 ----------------------------
 
 That the doctors didn't wash their hands increased the proportion of deaths by between 6.7 and 10 percentage points, according to a 95% confidence interval. All in all, it would seem that Semmelweis had solid evidence that handwashing was a simple but highly effective procedure that could save many lives.
