@@ -1,6 +1,6 @@
 # Dr. Semmelweis and the discovery of handwashing
 
-This repository aims to provide a reference of work on the project *Dr. Semmelweis and the discovery of handwashing* to other users of [DataCamp](https://www.datacamp.com/home). Plots and images can be found under directory **Semmelweis_files**.
+This repository aims to provide a reference of work (and as a practice of writing markdown files!) on the project *Dr. Semmelweis and the discovery of handwashing* to other users of [DataCamp](https://www.datacamp.com/home). Plots and codes can be found under directory **Semmelweis_files**.
 
 ## Project Flow:
 
